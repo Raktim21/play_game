@@ -1,0 +1,2314 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+.ticker{
+    background-image: linear-gradient( -180deg, #2F424D 0%, #141E21 100%);
+    border-bottom: 1px solid #fff;
+    padding:17px;    
+}
+.news{
+    width: 160px;
+}
+.news-scroll a{
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding:27px;
+}
+.dot{
+    height: 6px;
+    width: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 2px !important;
+    background-image: linear-gradient( -180deg, #2F424D 0%, #141E21 100%);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+}
+.nav-item{
+    
+    font-size: 21px;
+    padding-right: 50px;
+    padding-left: 100px;
+
+}
+
+
+.search-wrap {
+    position: relative;
+    margin:22px;
+}
+.search-wrap::before {
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    left: 2px;
+    display: block;
+    content: '';
+    width: 19px;
+    height: 19px;
+    background-image: url('data:image/svg+xml,<svg width="19" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M12.547 11.543H12l-.205-.172a4.539 4.539 0 001.06-2.914A4.442 4.442 0 008.41 4C5.983 4 4 5.989 4 8.457a4.442 4.442 0 004.445 4.457c1.094 0 2.12-.411 2.905-1.062l.206.171v.548L14.974 16 16 14.971l-3.453-3.428zm-4.102 0a3.069 3.069 0 01-3.077-3.086 3.068 3.068 0 013.077-3.086 3.069 3.069 0 013.076 3.086 3.069 3.069 0 01-3.076 3.086z" fill="rgb(30,30,30" fill-rule="nonzero"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+}
+.search-input {
+    width: 280px;
+    padding-left: 25px;
+    margin: 0;
+    height: 25px;
+    box-sizing: border-box;
+}
+input, textarea {
+    font-family: Tahoma, Helvetica, sans-serif;
+    color: #1e1e1e;
+    font-size: 12px;
+    border: 0px #aaa solid;
+    background: #fff;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    box-sizing: border-box;
+}
+.search-clear {
+    position: absolute;
+    top:50%;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    transform: translateY(-50%);
+    background-color: #edeced;
+}
+.search-clear:before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,<svg width="19" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M14 5.912L10.412 9.5 14 13.088l-.912.912L9.5 10.412 5.912 14 5 13.088 8.588 9.5 5 5.912 5.912 5 9.5 8.588 13.088 5z" fill="rgb(30,30,30" fill-rule="evenodd"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.suggestion-wrap {
+    position: absolute;
+    z-index: 4;
+    //top: 22px;
+    width: 280px;
+    background: #fff;
+    border-top: 1px solid #E0E6E6;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 50%);
+    box-sizing: border-box;
+}.suggestion-wrap ul {
+    max-height: 210px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:0;
+    margin:0;
+}.suggestion-wrap li {
+    height: 32px;
+    line-height: 32px;
+    list-style: none;
+    text-indent: 6px;
+}.suggestion-wrap p, .suggestion-wrap a {
+    color: #1E1E1E !important;
+    cursor: pointer !important;
+}.header a {
+    height: 100%;
+}
+#summaryTotalBalance {
+    font-size: 30px !important;
+    line-height: 36px;
+    font-weight: bold !important;
+    color: #2789ce !important;
+}
+.top {
+    background-color: black;
+    color: #fff;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top .left {
+    display: flex;
+        margin-top: -18px;
+    
+    
+}
+
+.top .left h1 a img {
+    margin-top:15px;
+}
+
+.left .search-box .form-group {
+    position: relative;
+    margin-right: 0;
+    margin-left: 14px;
+    margin-top: 18px;
+}
+
+.left .search-box .form-control {
+    height: 25px;
+    border-radius: 4px;
+    color: var(--textBody);
+    background: #fff;
+    width: 170%;
+    font-size: 12px;
+    padding-left: 25px;
+    line-height: 2;
+    color: #000;
+}
+
+.left .search-box .search-icon {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    height: 11px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate( 0deg) brightness(0%) contrast(200%);
+}
+
+.right input.input {
+    height: 25px;
+    width: 130px;
+    margin-top: 18px;
+    font-size: 13px;
+    border-radius: 5px;
+    padding-left: 4px;
+}
+
+.right img {
+    height: 13px;
+}
+
+.right i.fa.fa-user {
+    color:#fff;
+    font-size: 12px;
+    padding-right: 6px;
+}
+
+.right .sign {
+    background-color: #666666;
+    background-image: linear-gradient( -180deg, #666 0%, #333 100%);
+    color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 3px 15px 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* signup header */
+
+.right-signup input.input{
+    height: 25px;
+    width: 130px;
+    font-size: 13px;
+    border-radius: 5px;
+    padding-left: 4px;
+    margin-top: 0 !important
+}
+.right-signup img{
+    position: absolute;
+    height: 16px;
+    top: 30px;
+    margin-left: 74px;
+}
+
+.right-signup .login{
+    background-color: #E83523;
+    background-image: linear-gradient( 
+    -180deg, #F72424 0%, #BB1C00 100%);
+    color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 6px 15px 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 6px;
+    margin-left: 3px;
+}
+.right-signup .sign{
+    background-color: #666666;
+    background-image: linear-gradient(
+-180deg, #666 0%, #333 100%);
+color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 6px 15px 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* end signup header */
+
+.top-two {
+    min-height: 28px;
+    background:linear-gradient(180deg, #ffcc2f 8%, #ffb80c 100%);
+    //box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 75%);
+    height: auto;
+}
+
+.top-two .menu {
+    padding: 0;
+        margin-bottom: 0;
+    
+}
+
+.top-two .menu li {
+    float: left;
+    border-right: 1px solid #383838;
+    padding: 0 11px;
+    border-right-color: rgba(69, 32, 7, 0.2);
+}
+
+.top-two .menu li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 12px;
+    line-height: 2.3;
+    color: #000;
+    font-weight: 600;
+}
+
+
+
+.top-two .menu li .active{
+    box-shadow: inset 0 1px 3px 0 rgb(52 9 9 / 50%);
+    background:linear-gradient(180deg, #DBBC68 0%, #FFDC7A 61%);
+    background-position: inherit;
+    padding: 6px 13px 8px 13px;
+    margin: 0 -11px 0px 0px;
+}
+.top-two .menu li a:hover {
+    //text-decoration: underline;
+    
+}
+.top-two .menu li:hover
+{
+	background:linear-gradient(180deg, #DBBC68 0%, #FFDC7A 61%);
+}
+.top-two .menu li a .tag-live {
+    position: absolute;
+    top: 66px;
+    left: 270px;
+    min-width: 33px;
+    height: 12px;
+    border-radius: 3px;
+    padding-right: 3px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    background-image: linear-gradient( 180deg, #FB3434 0%, #E80505 100%);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%);
+}
+
+.tag-live strong svg,.tag-live2 strong svg,.tag-live3 strong svg, .on_live .live_icon span svg {
+    animation: twinkling 1.4s infinite ease;
+        margin-left: 2px;
+    
+}
+
+
+@keyframes twinkling {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.top-two .menu li a .tag-live strong {
+    flex: 1;
+    height: 100%;
+    margin-right: 3px;
+    padding: 0 2px;
+    border-radius: 3px 0px 0px 3px;
+    background-image: linear-gradient( 180deg, #fff 0%, #eee 89%);
+}
+
+.top-two .menu li a .tag-live strong span {
+    width: 14px;
+    height: 8px;
+}
+
+.top-two .menu li a .tag-live2 {
+    position: absolute;
+    top: 66px;
+    left: 332px;
+    min-width: 33px;
+    height: 12px;
+    border-radius: 3px;
+    padding-right: 3px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    background-image: linear-gradient( 180deg, #FB3434 0%, #E80505 100%);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%);
+}
+
+.top-two .menu li a .tag-live2 strong {
+    flex: 1;
+    height: 100%;
+    margin-right: 3px;
+    padding: 0 2px;
+    border-radius: 3px 0px 0px 3px;
+    background-image: linear-gradient( 180deg, #fff 0%, #eee 89%);
+}
+
+.top-two .menu li a .tag-live2 strong span {
+    width: 14px;
+    height: 8px;
+}
+
+.top-two .menu li a .tag-live3 {
+    position: absolute;
+    top: 66px;
+    left: 394px;
+    min-width: 33px;
+    height: 12px;
+    border-radius: 3px;
+    padding-right: 3px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    background-image: linear-gradient( 180deg, #FB3434 0%, #E80505 100%);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%);
+}
+
+.top-two .menu li a .tag-live3 strong {
+    flex: 1;
+    height: 100%;
+    margin-right: 3px;
+    padding: 0 2px;
+    border-radius: 3px 0px 0px 3px;
+    background-image: linear-gradient( 180deg, #fff 0%, #eee 89%);
+}
+
+.top-two .menu li a .tag-live3 strong span {
+    width: 14px;
+    height: 8px;
+}
+
+.top-two .right ul li {
+    float: left;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 2.4;
+    font-weight: 600;
+}
+
+.top-two .right ul li span {
+    color: #9f8f1c;
+    font-weight: normal;
+    font-size: 11px;
+    padding-right: 4px;
+}
+
+.top-two .right ul li .bet {
+    /* background: #020202; */
+    color: #ffbd15;
+    padding: 7px 15px 7px 15px;
+    margin-top: -5px;
+    border-top: 3px solid #ffbd15;
+    text-decoration: none;
+    text-transform: capitalize;
+	vertical-align: middle;
+            border-top: 3px solid #6bbd11;
+        margin-top: -3px;
+    
+}
+.bet.one_click.select {
+	border-top: 0 !important;
+}
+
+.top-two .right ul li .bet:hover {
+    text-decoration: underline;
+}
+
+.top-two .right ul li .dropdown-toggle {
+    color:#000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.top-two .right ul li .dropdown-toggle:hover {
+    text-decoration: underline;
+}
+
+.top-two .right ul {
+    float: right;
+    margin: 0;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1150px;
+}
+
+.top .right {
+    margin-top:0px;
+}
+
+.top .right .balance {
+    background:#2d2d2d00;
+    padding: 4px 9px 4px 9px;
+    font-size: 11px;
+    text-transform: capitalize;
+    color:#fff;
+    font-weight: unset;
+    border-radius: 4px 0 0 4px;
+    text-decoration: none;
+    border-top: 1px solid #ffffff7a;
+    //margin-right: -5px;
+    //box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 50%);
+    border:1px solid rgba(0,0,0,0.3);
+
+}
+
+#top_menu_popup {
+    background-color: rgba(255,255,255,0.15) !important;
+
+}
+
+.img-cricle.balance img {
+    background: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.408 3.223c1.164 0 2.238.288 3.223.863.972.563 1.739 1.324 2.302 2.283.588.998.882 2.072.882 3.223 0 1.151-.294 2.225-.882 3.223-.563.972-1.33 1.739-2.302 2.302-.998.588-2.072.882-3.223.882-1.151 0-2.225-.294-3.223-.882-.972-.563-1.739-1.33-2.302-2.302-.588-.998-.882-2.072-.882-3.223h1.612c0 .87.214 1.672.643 2.408.428.735 1.01 1.317 1.746 1.746.735.428 1.538.643 2.408.643.87 0 1.672-.214 2.408-.643.735-.428 1.317-1.01 1.746-1.746.428-.735.643-1.538.643-2.408 0-.87-.214-1.672-.643-2.408-.428-.735-1.01-1.317-1.746-1.746-.735-.428-1.538-.643-2.408-.643v3.223l-4.01-4.01 4.01-4.01v3.223z" fill="rgb(30,30,30)"/></svg>') no-repeat center center;
+    background-size: contain;
+    filter: invert(1);
+}
+
+.top .right .img-cricle {
+    border-radius: 0 5px 5px 0;
+    /* background: #1d1d1d8c; */
+    margin-right: 8px;
+    /* padding: 4px 2px 5px 6px; */
+    padding: 4px 0px 4px 4px;
+
+    border-top: 1px solid #ffffff7a;
+}
+
+.top .right .balance span {
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: 600;
+    padding-left: 0px;
+    padding-right: 3px;
+}
+
+.top .right a .four-d {
+    border:1px solid rgb(255 255 255 / 30%);
+    border-radius: 4px;
+    padding: 0px 10px 0px 10px;
+    font-size: 10px;
+}
+
+.top .right .login1 {
+    border-radius: 5px;
+    background: #1d1d1d00;
+    margin-right: 8px;
+    padding: 4px 9px 4px 9px;
+    font-size: 13px;
+    border: 1px solid #000;
+    //border-top: 1px solid #ffffff7a;
+}
+
+.top .right .login1 i.fas.fa-caret-down {
+    margin-left: 11px;
+    margin-right: 0px;
+}
+
+.top .right ul .pro-span {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.top .right ul .pro-span span {
+    font-size: 10px;
+    padding: 5px 0px 0px 3px;
+    border-left: 1px solid #000;
+}
+
+.top .right ul li .logout img {
+    width: 10px;
+    height: 11px;
+    vertical-align: middle;
+    margin: -2px 0 0 5px;
+    background: url('data:image/svg+xml,<svg width="10" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M5.71 7.706l1.432-1.604H1.778V4.898h5.39L5.71 3.294l.781-.86L9.278 5.5 6.49 8.565l-.78-.86zM1.12 0C.825 0 .564.124.339.372a1.24 1.24 0 0 0-.339.86v8.536c0 .325.113.611.339.86.225.248.486.372.78.372H8.88c.295 0 .556-.124.781-.372a1.24 1.24 0 0 0 .339-.86V7.333H8.88v2.435H1.12V1.232h7.76v2.435H10V1.232a1.24 1.24 0 0 0-.339-.86C9.436.124 9.175 0 8.881 0H1.12z" fill="%23FFF" fill-rule="evenodd"/></svg>') no-repeat;
+    top: 237px;
+    right: 52px;
+}
+
+.top .right ul li {
+    padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid #ccc;
+    width: 170px;
+}
+
+.top .right ul li a {
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 3px 0px 2px 8px;
+}
+
+.top .right ul .logout-li {
+    background: #7E97A7;
+    margin: 5px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0px 0px 3px 0px;
+}
+
+.top .right ul li .logout {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 11px;
+    font-size: 12px;
+}
+
+.top .right ul .li-hover:hover {
+    background-color: #ebebeb;
+}
+
+.top .right .balance:hover {
+    text-decoration: underline;
+}
+
+.top-two .menu li .tag-new:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: 100% -8618px;
+    height: 29px;
+    width: 29px;
+}
+
+.top-two .menu li .tag-new:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-position: 100% -8600px;
+}
+
+/* setting popup start  */
+
+.slip_set-pop, .oneclick_set-pop {
+    display: none;
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    width: 282px;
+    z-index: 99;
+    border-radius: 0 0 4px 4px;
+}
+
+.set-content {
+    height: 385px;
+    min-height: 100px;
+    background-color: #E0E6E6;
+    font-size: 11px;
+    color: #3B5160;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+    width: 305px;
+    margin-left: -23px;
+    box-shadow: 0 4px 5px rgb(0 0 0 / 50%);
+
+}
+
+.stake-set dd.col-defult, .odds-set dd.col-defult {
+    width: 100%;
+}
+
+label {
+    cursor: pointer;
+}
+
+.stake-set .stake-input, .odds-set .stake-input {
+    width: 29.16667%;
+    font-size: 11px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-top: 1px solid #b1b1b1;
+    border-radius: 5px;
+}
+
+.set-content input, .set-content textarea {
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    margin: 0 5px 0 0;
+}
+
+.stake-set dt, .odds-set dt {
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.stake-set dd, .odds-set dd {
+    width: 50px;
+    margin: 0 9px 5px 0;
+}
+
+.skyexchange .btn.select, .skyexchange .select.btn-send, .skyexchange .pages a.select, .pages .skyexchange a.select, .skyexchange .calendarTable_inputBox input.select, .calendarTable_inputBox .skyexchange input.select, .skyexchange .calendarTable_inputBox textarea.select, .calendarTable_inputBox .skyexchange textarea.select {
+    color: #F8D61C;
+    background: #444 url(../img/btn-select-skyEX.jpg) repeat-x;
+    border-color: #222;
+}
+
+.stake-set dd.col-edit, .odds-set dd.col-edit {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50px;
+    margin-right: 0;
+}
+
+.col-edit .btn-edit {
+    border: 1px solid #7E97A7;
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 80%);
+    color: #3B5160;
+   /*  padding: 14px 3px 15px 3px; */
+    text-align: center;
+    text-decoration: none;
+    background: #eee url(../img/bg-btn.gif) repeat-x;
+}
+
+.col-edit a {
+       display: block;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.col-edit img {
+    background-position: -101px -8062px;
+    height: 9px;
+    width: 9px;
+}
+
+.stake-set .stake_edit-input, .odds-set .stake_edit-input {
+    width: 50px;
+    font-size: 11px;
+    margin-left: 0;
+}
+
+.stake-set dd.col-edit, .odds-set dd.col-edit {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50px;
+    margin-right: 0;
+}
+
+.skyexchange .slip_set-pop .btn-send, .skyexchange .oneclick_set-pop .btn-send {
+    color: #F8D61C;
+}
+
+.stake-set, .odds-set {
+    position: relative;
+    border-bottom: 1px solid #7E97A7;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 80%);
+    line-height: 15px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.odds-set dd {
+    width: 100%;
+        display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.set-content .btn-wrap {
+    margin-bottom: 0;
+    display: flex;
+    line-height: 1.8;
+}
+
+.btn-wrap li {
+    width: 50%;
+}
+
+.set-content .btn-wrap .btn, .set-content .btn-wrap .btn-send, .set-content .btn-wrap .pages a, .pages .set-content .btn-wrap a, .set-content .btn-wrap .calendarTable_inputBox input, .calendarTable_inputBox .set-content .btn-wrap input, .set-content .btn-wrap .calendarTable_inputBox textarea, .calendarTable_inputBox .set-content .btn-wrap textarea {
+    font-weight: bold;
+    line-height: 23px;
+}
+
+.stake-set dd .btn.select {
+    background: #444;
+    border: #222;
+    color: #ffbf19;
+    padding: 3px 6px 3px 6px;
+    font-size: 11px;
+        display: block;
+    line-height: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+.stake-set dd .btn {
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    padding: 3px 6px 3px 2px;
+    font-size: 11px;
+        display: block;
+    line-height: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.set-content .btn-wrap li .cancel {
+    background: #eee url(../img/bg-btn.gif) repeat-x;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 3px 38px 5px 38px;
+    text-decoration: none;
+    font-size: 12px !important;
+    color: black;
+    margin-left: -21px;
+}
+
+.set-content .btn-wrap li .save {
+    background: #464646 url(../img/bg-send_hover-skyEX.html) repeat-x;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 3px 38px 5px 38px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #f5c521;
+}
+
+.set-content .stake-set dd a i.fas.fa-pencil-alt {
+    font-size: 9px;
+    margin-left: 3px;
+}
+
+/* setting popup end  */
+
+/* top menu popup start  */
+
+.wallet-detail {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 21%;
+    font-size: 12px;
+    color: #3B5160;
+    background-color: #E0E6E6;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    z-index: 99;
+}
+
+.wallet-detail-group {
+    margin: 0px 6px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 30%);
+}
+
+.wallet-detail-group .wallet-detail-content {
+    padding: 0px 7px 0;
+}
+
+.wallet-detail-group .wallet-detail-content dt {
+    line-height: 1.6;
+    margin-bottom: 1px;
+}
+
+.wallet-detail-group .wallet-detail-content dd {
+    padding-bottom: 5px;
+}
+
+.wallet-detail-group .wallet-balance-num {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: bold;
+    padding-right: 80px;
+    color: #3B5160;
+}
+
+.account-wrap .main-wallet span:first-of-type {
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.badge-currency {
+    margin-right: 3px;
+    padding: 0 5px;
+    line-height: 16px;
+    font-size: 10px;
+    font-weight: bold !important;
+    color: #fff;
+    background-color: #5F849D;
+    border-radius: 3px;
+}
+
+.wallet-detail-group .wallet-exposure {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal !important;
+    padding: 7px 0;
+    border-top: 1px solid #E0E6E6;
+}
+
+.account-wrap .main-wallet span:first-of-type {
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.wallet-detail-group .wallet-exposure span {
+    color: #1E1E1E;
+}
+
+.wallet-detail-group:nth-child(2) .wallet-detail-content {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.wallet-detail-group:nth-child(2) .wallet-detail-content .wallet-recall {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    text-align: right;
+    padding: 0;
+}
+
+.btn-recall {
+    color: #3B5160;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.2;
+    padding: 0 8px;
+    background-color: rgba(94, 190, 255, 0.15);
+    border-radius: 4px;
+    border: 1px solid #7E97A7;
+    cursor: pointer;
+}
+
+.wallet-detail-group:nth-child(2) .wallet-detail-content:last-child {
+    border-bottom: none;
+}
+
+.btn-box {
+    padding: 0 7px 0px;
+}
+
+.wallet-detail .btn, .wallet-detail .btn-send, .wallet-detail .pages a, .pages .wallet-detail a, .wallet-detail .calendarTable_inputBox input, .calendarTable_inputBox .wallet-detail input, .wallet-detail .calendarTable_inputBox textarea, .calendarTable_inputBox .wallet-detail textarea {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 17px;
+    margin-bottom: 0;
+    background: white;
+}
+
+/* top menu popup end  */
+
+.loading-bar {
+    width: 100%;
+    margin-right: 0 !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-bar span {
+    width: 1.06667vw;
+    height: 1.06667vw;
+    border-radius: 50%;
+    background-color: #1E1E1E;
+    margin-right: 1.6vw;
+    opacity: 0;
+    animation: loadBar 0.8s ease infinite;
+}
+
+.loading-bar span:nth-child(1) {
+    animation-delay: 0s;
+}
+ .loading-bar span {
+    background-color: #FFB80C;
+}
+header li.main-wallet span:first-of-type {
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.loading-bar span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loading-bar span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loading-bar span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .loading-bar span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  .loading-bar span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  .loading-bar span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  
+  .loading-bar span:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+
+@keyframes loadBar {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.4);
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+
+/* my account start  */
+
+.main_wrap, .header {
+    position: relative;
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.col-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17.36111%;
+}
+
+.slip-wrap, .matched-wrap, .live-wrap, .tv-wrap, .game-wrap, .game-highlight-wrap, .game-wrap-horse, .favor-wrap, .sub_path {
+    background-color: #fff;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 1px;
+}
+
+.sub_path {
+    position: relative;
+}
+
+.path {
+    position: relative;
+    height: 25px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 25px;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    background-position: 0 -7155px;
+}
+
+.skyexchange .path {
+    background:#4b6373;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.skyexchange .path .path-back i.fa.fa-ellipsis-v {
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 7px;
+    line-height: 24px;
+}
+
+.skyexchange .path .path-back i.fa.fa-ellipsis-v::after {
+    background: #818181;
+    padding: 13px 0px 10px 0px;
+    font-weight: bold;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 70% 100%, 96% 51%, 71% 0);
+    width: 19px;
+    height: 23px;
+}
+
+.path li {
+    display: inline;
+    padding: 4px 13px 5px 6px;
+    background-position: 100% -2525px;
+}
+
+.path .path-last {
+    background-image: none;
+    padding-right: 6px;
+}
+
+.path a {
+    display: inline;
+    color: #ffbd15;
+}
+
+.skyexchange .path a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.skyexchange .path a::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    left: 6px;
+    background: #818181;
+    font-weight: bold;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 70% 100%, 96% 51%, 71% 0);
+    width: 20px;
+    height: 25px;
+}
+
+.path-pop {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    max-width: 100%;
+    background-color: #243a48;
+    padding: 5px 0;
+    z-index: 5;
+}
+
+.path-pop:not(:target) {
+    display: none;
+}
+
+.skyexchange .path-pop {
+    background-color: #222;
+}
+
+.menu-list {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    border-bottom: 1px solid #E0E6E6;
+    list-style: none;
+}
+
+.skyexchange .menu-list li {
+    border-bottom-color: #EFE1C1;
+}
+
+.skyexchange .menu-list li:hover {
+    background-color: #f2dca7;
+}
+
+.menu-list a {
+    line-height: 25px;
+    padding: 0 10px;
+}
+
+.menu-list .select {
+    color: #1e1e1e;
+}
+
+.skyexchange .menu-list a {
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.skyexchange .menu-list .select {
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.col-center {
+    position: relative;
+    margin-left: 17.36111%;
+    margin-right: 26.04167%;
+    padding: 0 15px;
+}
+
+.col-center.report {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.loading-wrap {
+    display: none;
+    top: 20%;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 50%);
+    padding-top: 25px;
+    z-index: 50;
+    position: absolute;
+    left: 50%;
+    width: 190px;
+    margin-left: -95px;
+}
+
+.loading {
+    padding: 5% 0;
+}
+
+.loading li {
+    list-style: none;
+    font-size: 11px;
+    color: #243a48;
+    margin-bottom: 3x;
+}
+
+.loading img {
+    background-position: -42px -415px;
+    height: 22px;
+    width: 38px;
+}
+
+.message-wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+   // width: 100%;
+    padding: 8px 0;
+    background-color: #f8e71c;
+    font-size: 14px;
+    color: #1e1e1e;
+    z-index: 99;
+}
+
+.success {
+    background-color: #6BBD11;
+}
+
+.col-center .message-wrap {
+    margin-left: -15px;
+}
+
+.message-wrap:not(:target) {
+    display: none;
+}
+
+.message-wrap .btn-close {
+    margin: 6px 10px 0 0;
+}
+
+.message-wrap p {
+    line-height: 22px;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+.event-left, .event-right {
+    width: 49.5%;
+}
+
+.profile-wrap {
+    background-color: #fff;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+}
+
+.profile-wrap h3 {
+    background-color: #7e97a7;
+    color: #fff;
+    line-height: 24px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.col-center.report .act-details {
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 2;
+    margin: 0;
+    padding: 3px 0px 6px 1px;
+}
+
+.event-left .profile-wrap dl {
+    display: flex;
+    font-size: 12px;
+    margin: 0;
+    padding: 0px 0px 0px 10px;
+    border-bottom: 1px solid #ebebeb;
+    height: 25px;
+    line-height: 20px;
+}
+
+.event-left .profile-wrap dl dt {
+    width: 130px;
+    font-weight: normal;
+}
+
+.col-center.report .pro-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-right .profile-wrap dl {
+    display: flex;
+    font-size: 12px;
+    margin: 0;
+    padding: 0px 0px 0px 10px;
+    border-bottom: 1px solid #ebebeb;
+    height: 25px;
+    line-height: 20px;
+}
+
+.event-right .profile-wrap dl dt {
+    width: 130px;
+    font-weight: normal;
+}
+
+.event-left .profile-wrap dl dd a {
+    font-size: 12px;
+    margin-left: 146px;
+    text-decoration: none;
+}
+
+.event-left .profile-wrap dl dd a i.fas.fa-pen {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+/* my account end  */
+
+/* balance overview start */
+
+.white-wrap {
+    background-color: #fff;
+    color: #3b5160;
+    padding: 7px 10px 5px;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+    display: flex;
+    padding-bottom: 0;
+}
+
+.white-wrap .over-bal {
+    width: 400px;
+}
+
+.white-wrap .h-p {
+    margin-left: 13px;
+}
+
+.head-balance {
+    border-right: 1px solid #d8d8d8;
+    margin-right: 10px;
+}
+
+.head-balance dt {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.head-balance dd {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #2789ce;
+}
+
+.head-balance dd span {
+    font-size: 12px;
+    color: #7e97a7;
+    font-weight: normal;
+}
+
+.white-wrap h3 {
+    width: 85%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.white-wrap p {
+    width: 85%;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.table01, .table-s {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+}
+
+.table01 th, .table-s th {
+    color: #243a48;
+    background-color: #E4E4E4;
+    border: 1px solid #7e97a7;
+    border-width: 1px 0 1px 0;
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.table01 td, .table-s td {
+    border-top: 1px solid #eee;
+    padding: 8px 10px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.pages {
+    margin: 13px 0;
+    text-align: center;
+    padding: 0;
+}
+
+/* balance overview end  */
+
+.no-data p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* my bets start  */
+
+.time_zone {
+	color:#000;
+}
+
+.tab {
+    min-width: 375px;
+    width: 40%;
+    margin: 0 0 10px;
+    border-radius: 5px;
+    display: flex !important;
+    padding: 0;
+}
+
+.tab li {
+    list-style: none;
+    border: 1px solid #3b5160;
+    border-width: 1px 0;
+}
+
+.tab li:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.tab.col3 li {
+    width: 28.33%;
+}
+
+.tab a {
+    background-color: #fff;
+    border-right: 1px solid #3b5160;
+    color: #3b5160;
+    font-size: 13px;
+    line-height: 27px;
+    font-weight: bold;
+    padding: 6px 20px 6px 20px;
+    text-decoration: none;
+}
+
+.tab .select {
+    background-color: #3b5160;
+    color: #fff;
+    padding: 6px 20px 6px 20px;
+    text-decoration: none;
+}
+
+.tab li:first-child a {
+    border-radius: 3px 0 0 3px;
+}
+
+.tab li:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.report-tab-wrap {
+    position: relative;
+    margin-top: 16px;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.report-tab-wrap .report-tab {
+    display: inline-block;
+    padding: 1px 21px 5px;
+    margin-right: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #3B5160;
+    border-radius: 3px 3px 0 0;
+    color: #3B5160;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-tab-wrap .report-tab.select {
+    background-color: #3B5160;
+    color: #FFFFFF;
+}
+
+.report-tab-wrap .report-tab.select:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3B5160;
+}
+
+.function-wrap {
+    position: relative;
+    padding: 10px 10px 0;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 10px;
+}
+
+.input-list, .filter-list {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex !important;
+    padding: 0;
+}
+
+.input-list li, .filter-list li {
+    list-style: none;
+    line-height: 25px;
+    margin: 0 5px 5px 0;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.input-list label, .filter-list label {
+    margin-right: 10px;
+}
+
+.table01 caption, .table-s caption {
+    background-color: #3b5160;
+    border-bottom: 1px solid #7e97a7;
+    color: #fff;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 0 10px;
+    caption-side: top;
+    font-size: 12px;
+}
+
+.table01 th, .table-s th {
+    color: #243a48;
+    background-color: #E4E4E4;
+    border: 1px solid #7e97a7;
+    border-width: 1px 0 1px 0;
+    padding: 8px 10px;
+}
+
+.table-s td, .table-s th {
+    padding: 5px;
+}
+
+.input-list li, .filter-list li {
+    list-style: none;
+    line-height: 25px;
+    margin: 0 5px 5px 0;
+    white-space: nowrap;
+}
+
+.input-list label, .filter-list label {
+    margin-right: 5px;
+}
+
+.cal-input {
+    width: 130px;
+    cursor: pointer;
+    background-position: 100% -23px;
+    height: 25px;
+    border-radius: 3px;
+    border: navajowhite;
+    border-top: 1px solid;
+    padding: 2px;
+}
+
+.input-list input, .filter-list input, .input-list textarea, .filter-list textarea, .input-list select, .filter-list select {
+    margin: 0 5px;
+}
+
+.time-input {
+    width: 45px;
+    height: 25px;
+}
+
+.input-list .time-input, .filter-list .time-input {
+    margin-left: -3px;
+}
+
+.input-list, .filter-list {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.btn, .btn-send, .marquee-pop .pages a, .pages a, .calendarTable_inputBox input, .calendarTable_inputBox textarea {
+    background: #eee url(../img/bg-btn.gif) repeat-x;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+    margin: 0 5px 10px 0;
+        padding: 3px 10px 1px 10px;
+    
+    text-decoration: none;
+}
+
+.input-list .btn-send, .filter-list .btn-send {
+    font-weight: bold;
+}
+
+.skyexchange .btn-send {
+    background: #121212 url(../img/skyexchange/bg-send-skyEX.html) repeat-x;
+    color: #F8D61C;
+    border-color: #000;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 3px 20px 1px 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.history-p p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* my bets end  */
+
+/* activity-log start  */
+
+.green {
+    color: #508d0e !important;
+}
+
+.pages li {
+    list-style: none;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.displayI, .sport_list-wrap .game-list-col dd a, .pages li {
+    display: inline;
+}
+
+.btn.disable, .disable.btn-send, .pages a.disable, .calendarTable_inputBox input.disable, .calendarTable_inputBox textarea.disable {
+    background: #dfdfdf;
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.pages a {
+    display: inline !important;
+    font-weight: normal;
+    margin: 0;
+    padding: 4px 10px;
+}
+
+.skyexchange .btn.select, .skyexchange .select.btn-send, .skyexchange .pages a.select, .pages .skyexchange a.select, .skyexchange .calendarTable_inputBox input.select, .calendarTable_inputBox .skyexchange input.select, .skyexchange .calendarTable_inputBox textarea.select, .calendarTable_inputBox .skyexchange textarea.select {
+    color: #F8D61C;
+    background: #444 url(../img/skyexchange/btn-select-skyEX.html) repeat-x;
+    border-color: #222;
+    text-decoration: none;
+}
+
+
+/* activity-log End  */
+
+.tab .select {
+    background-color: #3b5160;
+    color: #fff;
+}
+
+/* profit & loss start  */
+
+.white-wrap {
+    background-color: #fff;
+    color: #3b5160;
+    padding: 7px 10px 5px;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+}
+
+.acc-info {
+    margin-bottom: 5px;
+	padding: 0;
+}
+
+.acc-info li {
+    margin-right: 15px;
+    padding-left: 20px;
+}
+.acc-info li {
+	float: left;
+}
+
+.acc-info .user {
+    background-position: -12px -205px;
+    margin-right: 30px;
+    font-size: 12px;
+}
+
+.acc-info .user i.fas.fa-user {
+    font-size: 11px;
+    color: #b1b1b1;
+    padding-right: 6px;
+}
+
+.acc-info .time {
+    background-position: -12px -190px;
+    font-size: 12px;
+}
+
+.acc-info .time i.far.fa-alarm-clock {
+    font-size: 11px;
+    color: #fdfdfd;
+    /* padding-right: 6px; */
+    background: #b1b1b1;
+    padding: 3px 2px 2px 2px;
+    margin-right: 6px;
+    border-radius: 3px;
+}
+
+.report-tab-wrap {
+    position: relative;
+    margin-top: 16px;
+    list-style-type: none;
+}
+
+.report-tab-wrap .report-tab {
+    display: inline-block;
+    padding: 5px 24px 9px;
+    margin-right: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #3B5160;
+    border-radius: 3px 3px 0 0;
+    color: #3B5160;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-tab-wrap .report-tab.select {
+    background-color: #3B5160;
+    color: #FFFFFF;
+}
+
+.report-tab-wrap .report-tab.select:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3B5160;
+}
+
+.report-tab-wrap .report-tab {
+    display: inline-block;
+    padding: 3px 22px 5px;
+    margin-right: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #3B5160;
+    border-radius: 3px 3px 0 0;
+    color: #3B5160;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.function-wrap {
+    position: relative;
+    padding: 10px 10px 0;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 10px;
+}
+
+.white-wrap .function-wrap {
+    border-bottom-color: #E0E6E6;
+    margin-bottom: 0;
+}
+
+.input-list, .filter-list {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.input-list label, .filter-list label {
+    margin-right: 5px;
+}
+
+input.disable, textarea.disable {
+    background-color: #dcdcdc;
+    color: #666;
+    box-shadow: none;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.time-input {
+    width: 45px;
+}
+
+/* profit & loss End  */
+
+select {
+    width: 120px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    margin: 0 5px 5px 0;
+}
+
+.pop_box {
+    background: #eee;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.close_pop {
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    padding: 0 4px 0px 4px;
+    border: -r;
+    border-radius: 6px;
+}
+
+.pop_box h3 {
+    font-size: 16px;
+    color: #3b5160;
+    margin-top: 3px;
+    margin-left: 7px;
+    font-weight: 700;
+}
+
+.edit-popup {
+    width: 400px;
+    top: 130px;
+}
+
+.pop_box dl {
+    display: flex;
+    margin: 0;
+    text-align: right;
+    line-height: 20px;
+}
+
+.pop_box dt {
+    font-size: 12px;
+}
+
+.pop_box dd {
+    margin: 0;
+}
+
+.pop_box dd input {
+    height: 28px;
+    font-size: 12px;
+    margin-bottom: 7px;
+    margin-left: 13px;
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    border-top: 1px solid #000;
+    padding-left: 6px;
+}
+
+.must {
+    font-size: 13px;
+    color: #d0021b;
+}
+
+.error-text {
+    color: #d0021b;
+    font-size: 11px;
+}
+
+.skyexchange .btn-send {
+    background: #121212 url(../images/skyexchange/bg-send-skyEX.png) repeat-x;
+    color: #F8D61C;
+    border-color: #000;
+}
+
+.pupup-change {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pupup-change dd a {
+    padding: 5px 50px;
+    background: none;
+    background-color: black;
+    color: #F8D61C;
+}
+
+.pupup-change dd {
+    margin-top: 10px;
+}
+
+.pop_bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 80;
+}
+
+.pop_box {
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    background-color: #eee;
+    width: 400px;
+    border-radius: 5px;
+    padding: 15px;
+    transform: translate(-50%, 0);
+}
+
+.close_pop {
+    position: absolute;
+    right: 15px;
+    background-position: -41px -632px;
+    height: 16px;
+    width: 16px;
+}
+
+.fa-times {
+	line-height: 1.4;
+}
+
+.pop_box h3 {
+    font-size: 16px;
+    color: #3b5160;
+    margin-bottom: 18px;
+}
+
+.form_list {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.form_list dt {
+    width: 122px;
+    margin-right: 10px;
+}
+
+.form_list dd {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 132px;
+}
+
+.form_list dd input, .form_list dd textarea {
+    width: 160px;
+    margin: 0;
+}
+
+.show {
+    display: inline-block;
+}
+.top {
+    background:#000 url(../img/bg-top-skyfair.jpg) repeat-x;
+    align-items: center;
+}
+.one_click {
+    background-image: linear-gradient( 180deg
+ , #444 13%, #1B1B1B 81%);
+    background-position: inherit;
+}
+
+ .one_click.select {
+    color: #1e1e1e !important;
+    background-image: linear-gradient(
+180deg, #00c15d 0%, #009347 100%) !important;
+    background-position: inherit;
+}
+
+.one_click:hover {
+    background-image: linear-gradient(0deg , #444 19%, #1B1B1B 87%);
+}
+
+.one_click img {
+    margin-right: 5px;
+    vertical-align: top;
+    background-position: -94px -6625px;
+    height: 30px;
+    width: 16px;
+}
+
+.one_click img {
+	background-image: url(../img/top-s744cda92cf.png);
+    background-repeat: no-repeat;
+}
+
+.one_click img {
+    background-position: -94px -6175px;
+}
+
+ .one_click.select img {
+    background-position: -94px -6145px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+
+}
+
+
+
+
+.one_click-wrap {
+    position: relative;
+}
+
+
+.dialog-wrap, .dialog-wrap-w {
+    top: 340px;
+    background-color: rgba(0,0,0,0.85);
+    border-radius: 8px;
+    color: #fff;
+    z-index: 20;
+    position: absolute;
+    left: 5%;
+    width: 320px;
+    margin-left: -160px;
+}
+
+.one_click-wrap .dialog-wrap, .one_click-wrap .dialog-wrap-w {
+    top: -170px;
+    z-index: 52;
+    animation: upIn 0.8s ease;
+}
+
+
+@keyframes upIn {
+    0% {
+        opacity: 0;
+        top: -140px
+    }
+
+    100% {
+        opacity: 1;
+        top: -170px
+    }
+}
+
+.dialog-wrap h4, .dialog-wrap-w h4, .dialog-wrap .tc-content h5, .tc-content .dialog-wrap h5, .dialog-wrap-w .tc-content h5, .tc-content .dialog-wrap-w h5 {
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 7px 0;
+	text-align:center;
+}
+
+.dialog-content {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 5px 20px 0;
+}
+
+p {
+    margin-bottom: 7px;
+}
+
+.dialog-content .attention {
+    color: #f8e71c;
+}
+
+
+
+.btn-wrap {
+	display: block;
+}
+.dialog-wrap .btn-wrap, .dialog-wrap-w .btn-wrap {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 7px 10px 10px;
+    margin-bottom: 0;
+}
+
+.dialog-wrap .break li, .dialog-wrap-w .break li {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+
+.btn-send,  .nova88exch .total_all .search-but, .nova88exch .total_all  .search-but {
+    background: #121212 url(../img/bg-send-skyEX.png) repeat-x;
+    color: #f8d61c;
+    border-color: #000;
+}
+
+
+
+.dialog-wrap .break .btn-send, .dialog-wrap-w .break .btn-send, .dialog-wrap .break .nova88exch .total_all .search-but, .nova88exch .total_all .dialog-wrap .break .search-but, .dialog-wrap-w .break .nova88exch .total_all .search-but, .nova88exch .total_all .dialog-wrap-w .break .search-but {
+    float: none;
+    width: 46.42857%;
+    margin: 0 auto;
+    
+    display: block;
+    text-align: center;
+    background: #121212 url(../img/bg-send-skyEX.png) repeat-x;
+    color: #f8d61c;
+    border-color: #000;
+}
+
+.one_click-setting {
+    position: relative;
+    height: 31px;
+    background-repeat: repeat-x;
+    background-color: #3A7000;
+    color: #fff;
+    padding: 0 10px;
+    overflow: hidden;
+    z-index: 52;
+    background-position: 0 -6246px;
+}
+
+.one_click-setting {
+    color: #1e1e1e;
+    background-repeat: repeat-x;
+    background-color: #008841;
+    background-position: 0 -6091px;   
+}
+.one_click-setting h4 {
+	float:left;
+}
+.one_click-setting .one_click-stake{
+	display: flex;
+        justify-content: center;
+	}
+
+.bg-sprite, .slip-wrap h3, .matched-wrap h3, .live-wrap h3, .tv-wrap h3, .game-wrap h3, .game-highlight-wrap h3, .game-wrap-horse h3, .favor-wrap h3, .sub_path h3, .one_click.select, .path, .slider-bar, .slider-bar span, .upcome-head, .tab-highlight, .tab-markets, .live-head h3, .live-channel, .change-channel, .game-wrap-horse dt .game-list-place, .progress-bar, .progress-now, .scores-event, .scores-line, .tab-HS, .bets .back-all img, .bets-HS .back-all img, .bets-GH .back-all img, .bets .back-all:hover img, .bets-HS .back-all:hover img, .bets-GH .back-all:hover img, .bets .lay-all img, .bets-HS .lay-all img, .bets-GH .lay-all img, .bets .lay-all:hover img, .bets-HS .lay-all:hover img, .bets-GH .lay-all:hover img, .bets.disable .back-all img, .disable.bets-HS .back-all img, .disable.bets-GH .back-all img, .bets.disable .lay-all img, .disable.bets-HS .lay-all img, .disable.bets-GH .lay-all img, .line_markets-team, .line_markets-team .game-vs div, .line_market-name span, .fancy-head h4 span, .fancy-head .tc-content h5 span, .tc-content .fancy-head h5 span, .other-tab, .sportsbook-head h4 span, .sportsbook-head .tc-content h5 span, .tc-content .sportsbook-head h5 span, .o_12bet .path, .o_12bet .slip-wrap h3, .o_12bet .matched-wrap h3, .o_12bet .slider-bar span, .o_12bet .upcome-head, .o_12bet .tab-highlight, .o_12bet .tab-markets, .o_12bet .one_click-setting, .mazaplay .tab-highlight, .mazaplay .tab-markets, .mazaplay .one_click-setting, .mysports247 .path, .mysports247 .tab-highlight, .mysports247 .tab-markets, .mysports247 .one_click-setting, .skyexchange .one_click-setting, .o_spondemo .path, .o_spondemo .slip-wrap h3, .o_spondemo .matched-wrap h3, .o_spondemo .slider-bar span, .o_spondemo .upcome-head, .o_spondemo .one_click-setting, .skyinplay .path, .skyinplay .tab-highlight, .skyinplay .tab-markets, .skyinplay .one_click-setting, .bigexch .path, .bigexch .tab-highlight, .bigexch .tab-markets, .bigexch .one_click-setting, .masterexchange .path, .masterexchange .tab-highlight, .masterexchange .tab-markets, .masterexchange .one_click-setting, .matador .tab-highlight, .matador .tab-markets, .matador .one_click-setting, .fairenter .path, .fairenter .tab-highlight, .fairenter .tab-markets, .fairenter .one_click-setting, .lucky7 .path, .lucky7 .tab-highlight, .lucky7 .tab-markets, .lucky7 .one_click-setting, .qexch .path, .qexch .tab-highlight, .qexch .tab-markets, .qexch .one_click-setting, .betmygame .path, .betmygame .tab-highlight, .betmygame .tab-markets, .betmygame .one_click-setting, .fancyfair .one_click, .fancyfair .one_click.select, .fancyfair .path, .fancyfair .tab-highlight, .fancyfair .tab-markets, .fancyfair .one_click-setting, .maruti .tab-highlight, .maruti .tab-markets, .maruti .one_click-setting, .marutibook .one_click, .marutibook .one_click.select, .marutibook .tab-highlight, .marutibook .tab-markets, .marutibook .one_click-setting, .skyexchange247 .one_click-setting, .oceanexch1 .path, .oceanexch1 .tab-highlight, .oceanexch1 .tab-markets, .oceanbook1 .path, .oceanbook1 .tab-highlight, .oceanbook1 .tab-markets, .probetx .path, .probetx .tab-highlight, .probetx .tab-markets, .probetx .one_click-setting, .alphaexch .tab-highlight, .alphaexch .tab-markets, .alphaexch .one_click-setting, .alphaexchlive .tab-highlight, .alphaexchlive .tab-markets, .alphaexchlive .one_click-setting, .maxexch9 .path, .maxexch9 .tab-highlight, .maxexch9 .tab-markets, .maxexch9 .one_click-setting, .cftbet365 .one_click, .cftbet365 .one_click.select, .cftbet365 .tab-highlight, .cftbet365 .tab-markets, .cftbet365 .one_click-setting, .crickzoom .path, .crickzoom .tab-highlight, .crickzoom .tab-markets, .crickzoom .one_click-setting, .crickzoomlive .path, .crickzoomlive .tab-highlight, .crickzoomlive .tab-markets, .crickzoomlive .one_click-setting, .maxinplay .path, .maxinplay .tab-highlight, .maxinplay .tab-markets, .maxinplay .one_click-setting, .betbarter .path, .betbarter .slip-wrap h3, .betbarter .matched-wrap h3, .betbarter .slider-bar span, .betbarter .upcome-head, .betbarter .tab-highlight, .betbarter .tab-markets, .betbarter .one_click-setting, .probet247 .path, .probet247 .tab-highlight, .probet247 .tab-markets, .probet247 .one_click-setting, .kingfair24 .tab-highlight, .kingfair24 .tab-markets, .kingfair24 .one_click-setting, .sgexch247 .path, .sgexch247 .tab-highlight, .sgexch247 .tab-markets, .sgexch247 .one_click-setting, .sixball .path, .sixball .tab-highlight, .sixball .tab-markets, .sixball .one_click-setting, .sixballio .path, .sixballio .tab-highlight, .sixballio .tab-markets, .sixballio .one_click-setting, .wickets247 .one_click-setting, .crickex .tab-highlight, .crickex .tab-markets, .crickex .one_click, .crickex .one_click.select, .crickex .one_click-setting, .iceEX .one_click, .iceinplay .path, .iceinplay .tab-highlight, .iceinplay .tab-markets, .iceinplay .one_click-setting, .baji .one_click-setting, .baji365 .one_click-setting, .sportsexchlive .one_click-setting, .dafabet .tab-highlight, .dafabet .tab-markets, .dafabet .one_click-setting, .sharet365 .one_click-setting, .baazi365 .one_click-setting, .goexch365 .one_click, .goexch365 .one_click-setting, .sevenexch .path, .sevenexch .one_click-setting, .oxyinplay .one_click-setting, .cricfair .tab-highlight, .cricfair .tab-markets, .cricfair .one_click, .cricfair .one_click.select, .cricfair .one_click-setting, .khelexch .one_click-setting, .lionexch .one_click-setting, .hmsbet .path, .hmsbet .tab-highlight, .hmsbet .tab-markets, .hmsbet .one_click-setting, .jeetbuzz .one_click-setting, .skyfair .one_click-setting, .skyexchange247com .one_click-setting, .mcwex .one_click-setting, .enterfair .path, .enterfair .one_click-setting {
+    background-image: url(../img/bg-sbdc950abeb.png);
+    background-repeat: no-repeat;
+}
+
+
+.one_click-setting h4, .one_click-setting .tc-content h5, .tc-content .one_click-setting h5 {
+    line-height: 31px;
+        font-size: 15px;
+    
+}
+
+.one_click-stake {
+    position: absolute;
+    left: 50%;
+    margin-left: -207px;
+    background-position: 0 -5605px;
+    height: 31px;
+    width: 414px;
+/*     display:flex;
+	justify-content: center; */
+}
+
+
+.main-sprite, .btn-close, .icon-time, .icon-live, .icon-irun, .icon-predict, .icon-cashout, .icon-in_play, .icon-no_play, .icon-cricket, .icon-soccer, .icon-tennis, .icon-basketball, .icon-dog, .icon-HR, .icon-racing, .game-wrap .to-expand, .game-highlight-wrap .to-expand, .game-wrap-horse .to-expand, .close.game-wrap .to-expand, .close.game-highlight-wrap .to-expand, .close.game-wrap-horse .to-expand, .o_spondemo .game-wrap .to-expand, .o_spondemo .game-highlight-wrap .to-expand, .o_spondemo .game-wrap-horse .to-expand, .o_spondemo .close.game-wrap .to-expand, .o_spondemo .close.game-highlight-wrap .to-expand, .o_spondemo .close.game-wrap-horse .to-expand, .in-play.game-fancy:before, .in-play.game-sportsbook:before, .in-play.game-bookmaker:before, .in-play.game-live:before, .fancy-head .in-play span:before, .sportsbook-head .in-play span:before, .bookmaker .in-play span:before, .favor, .favor.select, .upcome-head dt, .tab-highlight a, .tab-markets a, .tab-highlight a.select, .tab-markets a.select, .transfer-wrap .close, .transfer-wrap-slider .close, .login_to_go .close, .live-list a:after, .icon-TV_head, .marquee-box h4:before, .marquee-box .tc-content h5:before, .tc-content .marquee-box h5:before, .marquee-box .tc-content h5:after, .tc-content .marquee-box h5:after, .game-list-col dd .info, .game-list-col .col-visit, .game-list-col .col-home, .game-list-col .col-draw, .game-head .favor, .game-head .favor.select, .game-head .refresh, .game-team .game-visit span, .game-scores .game-visit span, .game-team .game-home span, .game-scores .game-home span, .game-scores ul .scores-box, .its_turn, .icon-card-yellow, .icon-card-red, .score-pop:before, .score-pop-last:before, .scores-event img, .scores-line img, .match-odds img, .tab-HS .more_drop, .tab-HS .more_drop.select, .open-tv-wrap:before, .bets .back-all, .bets-HS .back-all, .bets-GH .back-all, .bets .lay-all, .bets-HS .lay-all, .bets-GH .lay-all, .bets .special_bet .btn-fancy_info, .bets-HS .special_bet .btn-fancy_info, .bets-GH .special_bet .btn-fancy_info, .bets.disable .back-all, .disable.bets-HS .back-all, .disable.bets-GH .back-all, .bets.disable .lay-all, .disable.bets-HS .lay-all, .disable.bets-GH .lay-all, .bets .to-expand, .bets-HS .to-expand, .bets-GH .to-expand, .bets.close .to-expand, .close.bets-HS .to-expand, .close.bets-GH .to-expand, .disabled .back-all, .disabled .back-all:hover, .disabled .lay-all, .disabled .lay-all:hover, .uniform, .more, .line_markets-team .game-visit span, .line_markets-team .game-home span, .line_markets-team .game-vs div:before, .line_markets-team .game-vs div:after, .btn-rules img, .line_market-name, .add-pin, .delete-pin, .col-info .add-pin, .col-info .delete-pin, h3 .add-pin, h3 .delete-pin, h4 .add-pin, .tc-content h5 .add-pin, h4 .delete-pin, .tc-content h5 .delete-pin, .arrow-dialog, .one_click-setting .a-edit img, .one_click-stake, .quick_bet-wrap .odd-add .up, .quick_bet-wrap .odd-add .down, .quick_bet-wrap .odd-add.disable .up, .quick_bet-wrap .odd-add.disable .down, .edit img, .other-tab:before, .other-tab:after, .btn-fancybet_rules, .btn-sportsbook_rules, .o_12bet .game-wrap .to-expand, .o_12bet .game-wrap.close .to-expand, .o_12bet .tab-highlight a, .o_12bet .tab-markets a, .o_12bet .tab-highlight a.select, .o_12bet .tab-markets a.select, .o_12bet .game-wrap-horse .to-expand, .o_12bet .game-wrap-horse.close .to-expand, .o_12bet .add-pin h3, .o_12bet .delete-pin h3, .o_12bet .one_click-stake, .mazaplay .one_click-setting .a-edit img, .mazaplay .one_click-stake, .mysports247 .one_click-setting .a-edit img, .mysports247 .one_click-stake, .skyexchange .login_to_go .close, .skyexchange .one_click-setting .a-edit img, .skyexchange .one_click-stake, .o_spondemo .tab-highlight, .o_spondemo .tab-markets, .o_spondemo .tab-highlight a, .o_spondemo .tab-markets a, .o_spondemo .tab-highlight a.select, .o_spondemo .tab-markets a.select, .o_spondemo .add-pin h3, .o_spondemo .delete-pin h3, .o_spondemo .one_click-stake, .skyinplay .one_click-setting .a-edit img, .skyinplay .one_click-stake, .bigexch .one_click-setting .a-edit img, .bigexch .one_click-stake, .masterexchange .login_to_go .close, .masterexchange .one_click-setting .a-edit img, .masterexchange .one_click-stake, .matador .one_click-setting .a-edit img, .matador .one_click-stake, .fairenter .one_click-setting .a-edit img, .fairenter .one_click-stake, .lucky7 .one_click-setting .a-edit img, .lucky7 .one_click-stake, .qexch .one_click-setting .a-edit img, .qexch .one_click-stake, .betmygame .one_click-setting .a-edit img, .betmygame .one_click-stake, .fancyfair .one_click-setting .a-edit img, .fancyfair .one_click-stake, .maruti .one_click-setting .a-edit img, .maruti .one_click-stake, .marutibook .one_click-setting .a-edit img, .marutibook .one_click-stake, .skyexchange247 .login_to_go .close, .skyexchange247 .one_click-setting .a-edit img, .skyexchange247 .one_click-stake, .probetx .one_click-setting .a-edit img, .probetx .one_click-stake, .alphaexch .one_click-setting .a-edit img, .alphaexch .one_click-stake, .alphaexchlive .one_click-setting .a-edit img, .alphaexchlive .one_click-stake, .maxexch9 .one_click-setting .a-edit img, .maxexch9 .one_click-stake, .cftbet365 .one_click-setting .a-edit img, .cftbet365 .one_click-stake, .crickzoom .one_click-setting .a-edit img, .crickzoom .one_click-stake, .crickzoomlive .one_click-setting .a-edit img, .crickzoomlive .one_click-stake, .maxinplay .one_click-setting .a-edit img, .maxinplay .one_click-stake, .betbarter .game-wrap .to-expand, .betbarter .game-wrap.close .to-expand, .betbarter .tab-highlight a, .betbarter .tab-markets a, .betbarter .tab-highlight a.select, .betbarter .tab-markets a.select, .betbarter .game-wrap-horse .to-expand, .betbarter .game-wrap-horse.close .to-expand, .betbarter .add-pin h3, .betbarter .delete-pin h3, .betbarter .one_click-stake, .probet247 .one_click-setting .a-edit img, .probet247 .one_click-stake, .kingfair24 .one_click-setting .a-edit img, .kingfair24 .one_click-stake, .sgexch247 .one_click-setting .a-edit img, .sgexch247 .one_click-stake, .sixball .one_click-setting .a-edit img, .sixball .one_click-stake, .sixballio .one_click-setting .a-edit img, .sixballio .one_click-stake, .wickets247 .login_to_go .close, .wickets247 .one_click-setting .a-edit img, .wickets247 .one_click-stake, .crickex .login_to_go .close, .crickex .one_click-setting .a-edit img, .crickex .one_click-stake, .iceEX .login_to_go .close, .iceEX .one_click-setting .a-edit img, .iceEX .one_click-stake, .iceinplay .one_click-setting .a-edit img, .iceinplay .one_click-stake, .dhoom .login_to_go .close, .dhoom .one_click-setting .a-edit img, .dhoom .one_click-stake, .baji .login_to_go .close, .baji .one_click-setting .a-edit img, .baji .one_click-stake, .agexch247 .login_to_go .close, .agexch247 .one_click-setting .a-edit img, .agexch247 .one_click-stake, .baji365 .login_to_go .close, .baji365 .one_click-setting .a-edit img, .baji365 .one_click-stake, .sportsexchlive .login_to_go .close, .sportsexchlive .one_click-setting .a-edit img, .sportsexchlive .one_click-stake, .dafabet .one_click-setting .a-edit img, .dafabet .one_click-stake, .sharet365 .login_to_go .close, .sharet365 .one_click-setting .a-edit img, .sharet365 .one_click-stake, .baazi365 .login_to_go .close, .baazi365 .one_click-setting .a-edit img, .baazi365 .one_click-stake, .goexch365 .login_to_go .close, .goexch365 .one_click-setting .a-edit img, .goexch365 .one_click-stake, .sevenexch .one_click-setting .a-edit img, .sevenexch .one_click-stake, .oxyinplay .login_to_go .close, .oxyinplay .one_click-setting .a-edit img, .oxyinplay .one_click-stake, .cricfair .login_to_go .close, .cricfair .one_click-setting .a-edit img, .cricfair .one_click-stake, .khelexch .one_click-setting .a-edit img, .khelexch .one_click-stake, .lionexch .login_to_go .close, .lionexch .one_click-setting .a-edit img, .lionexch .one_click-stake, .hmsbet .one_click-setting .a-edit img, .hmsbet .one_click-stake, .regalexch365 .login_to_go .close, .regalexch365 .one_click-setting .a-edit img, .regalexch365 .one_click-stake, .jeetbuzz .login_to_go .close, .jeetbuzz .one_click-setting .a-edit img, .jeetbuzz .one_click-stake, .skyfair .login_to_go .close, .skyfair .one_click-setting .a-edit img, .skyfair .one_click-stake, .skyexchange247com .login_to_go .close, .skyexchange247com .one_click-setting .a-edit img, .skyexchange247com .one_click-stake, .mcwex .login_to_go .close, .mcwex .one_click-setting .a-edit img, .mcwex .one_click-stake, .enterfair .one_click-setting .a-edit img, .enterfair .one_click-stake, .suninplay .login_to_go .close, .suninplay .one_click-setting .a-edit img, .suninplay .one_click-stake, .nova88exch .login_to_go .close, .nova88exch .one_click-setting .a-edit img, .nova88exch .one_click-stake, .betbhai247 .login_to_go .close, .betbhai247 .one_click-setting .a-edit img, .betbhai247 .one_click-stake, .srexch .login_to_go .close, .srexch .one_click-setting .a-edit img, .srexch .one_click-stake, .sixballcric .login_to_go .close, .sixballcric .one_click-setting .a-edit img, .sixballcric .one_click-stake, .dollarexc .login_to_go .close, .dollarexc .one_click-setting .a-edit img, .dollarexc .one_click-stake, .smash .one_click-setting .a-edit img, .smash .one_click-stake, .jua247 .login_to_go .close, .jua247 .one_click-setting .a-edit img, .jua247 .one_click-stake, .shambhu9 .login_to_go .close, .shambhu9 .one_click-setting .a-edit img, .shambhu9 .one_click-stake, .sairamexch .one_click-stake {
+    background-image: url(../img/main-s56e8305f6b.png);
+    background-repeat: no-repeat;
+}
+
+.one_click-stake {
+    background-position: 0 -5356px;
+    height: 31px;
+    width: 414px;
+}
+
+.one_click-stake li {
+    width: 65px;
+    padding-top: 5px;
+	margin-right: 3px;
+    
+}
+
+.one_click-setting a {
+    width: 68px;
+    height: 18px !important;
+    border: 1px solid #164F00;
+    font-size: 11px !important;
+    line-height: 8px;
+    margin: 0;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+
+.one_click-setting .a-edit {
+	margin-top: 7px !important;
+}
+
+.one_click-stake .btn, .one_click-stake .btn-send, .one_click-stake .nova88exch .total_all .search-but, .nova88exch .total_all .one_click-stake .search-but, .one_click-stake .pages a, .pages .one_click-stake a, .one_click-stake .calendarTable_inputBox input, .calendarTable_inputBox .one_click-stake input, .one_click-stake .calendarTable_inputBox textarea, .calendarTable_inputBox .one_click-stake textarea {
+    width: calc(100% - 2px) !important;
+    font-weight: normal;
+    border-color: #174F00;
+}
+
+
+
+ .btn.select, .skyexchange .select.btn-send, .skyexchange .nova88exch .total_all .select.search-but, .nova88exch .total_all .skyexchange .select.search-but, .skyexchange .pages a.select, .pages .skyexchange a.select, .skyexchange .calendarTable_inputBox input.select, .calendarTable_inputBox .skyexchange input.select, .skyexchange .calendarTable_inputBox textarea.select, .calendarTable_inputBox .skyexchange textarea.select {
+    color: #f8d61c;
+    background: #444 url(../img/btn-select-skyEX.jpg) repeat-x;
+    border-color: #222;
+}
+
+.one_click-setting .a-edit {
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 5px;
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 50%);
+    text-align: center;
+    line-height: 15px;
+    text-decoration: none;
+    float:right;
+}
+
+.one_click-setting .a-edit {
+    color: #1e1e1e;
+}
+
+.one_click-setting .a-edit img {
+    background-position: -405px -2448px;
+    height: 9px;
+    width: 9px;
+        margin-left: 3px;
+    
+}
+
+.arrow-dialog {
+    position: absolute;
+    margin-left: 152px;
+    background-position: -398px -99px;
+    height: 10px;
+    width: 16px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 53;
+}
+
+.one_click-wrap .overlay {
+    z-index: 51;
+}
+.overlay:not(:target) {
+    display: none;
+}
+
+.white-halo {
+    box-shadow: 0 0 8px 8px rgb(255 255 255 / 70%);
+}
+
+.one_click-stake input, .one_click-stake textarea {
+    width: 100%;
+    line-height: 18px;
+    font-size: 11px;
+    color: #174F00;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #174F00;
+    background-color: #6EA73C;
+    box-shadow: inset 0 2px 0 rgb(0 0 0 / 15%);
+}
+
+.one_click-stake input, .one_click-stake textarea {
+    border-color: #005f2d;
+    color: #fff;
+    background-color: #1f8c53;
+    text-align: center;
+}
+
+
+ .one_click-stake input:focus, .one_click-stake textarea:focus {
+    border-color: #fff;
+    background-color: #00632f
+}
+
+
+
+ #editOneClickBetStakeBox .btn-send,  .nova88exch .total_all .search-but, .nova88exch .total_all  .search-but {
+    background: #121212 url(../images/skyexchange/bg-send-skyEX.png) repeat-x;
+    color: #f8d61c;
+    border-color: #000;
+    text-align: center;
+    line-height:15px;
+    margin-top: 5px;
+    
+}
+ .one_click-setting a {
+    border-color: #005f2d;
+}
+.slip-head li {
+    font-size: 11px;
+}
+.displayB, .delete, .btn, .btn-send, .nova88exch .total_all .search-but, .marquee-pop .pages a, .pages a, .calendarTable_inputBox input, .calendarTable_inputBox textarea, .slip-back .col-stake_list ul, .slip-lay .col-stake_list ul, .slip-book .col-stake_list ul, .login-wrap, .account-wrap, .menu, .setting-wrap, .slip-head, .matched-head, .stake-popup, .btn-wrap, .slip-option, .cashout-wrap, .slider, .tab-highlight, .tab-markets, .game-wrap-horse .hs-time, .game-scores .scores-time, .game-scores ul, .tab-HS, .game-info, .multi_select ul, .marquee-pop .input-list, .marquee-pop .filter-list, .tab, .input-list, .filter-list, .filter-pop ul, .acc-info, .total-show, .slip-back .col-stake_list ul li, .slip-lay .col-stake_list ul li, .slip-book .col-stake_list ul li, .login-wrap li, .account-wrap li, .menu li, .setting-wrap li, .slip-head li, .matched-head li, .stake-popup li, .btn-wrap li, .slip-option li, .cashout-wrap li, .slider li, .tab-highlight li, .tab-markets li, .game-wrap-horse .hs-time li, .game-scores .scores-time li, .game-scores ul li, .tab-HS li, .game-info li, .multi_select ul li, .marquee-pop .input-list li, .marquee-pop .filter-list li, .tab li, .input-list li, .filter-list li, .filter-pop ul li, .acc-info li, .total-show li, .btn_rules:after, .tag-live strong:before, .game-head .ico_rules:before, .age_box li .secondary:before, .age_box li .btn-send:before, .age_box li .nova88exch .total_all .search-but:before, .nova88exch .total_all .age_box li .search-but:before, .slip-wrap h3 a, .matched-wrap h3 a, .live-wrap h3 a, .tv-wrap h3 a, .game-wrap h3 a, .game-highlight-wrap h3 a, .game-wrap-horse h3 a, .favor-wrap h3 a, .sub_path h3 a, .slip-back dt:hover .full-amount, .slip-lay dt:hover .full-amount, .slip-book dt:hover .full-amount, .slip-back dd:hover .full-amount, .slip-lay dd:hover .full-amount, .slip-book dd:hover .full-amount, .slip-back .col-stake_list:target, .slip-lay .col-stake_list:target, .slip-book .col-stake_list:target, .btn-live, .btn-book, .account-wrap ul a, .more_drop-list a, .selection-list a, .multi-event_type, .game-fancy:after, .game-sportsbook:after, .game-bookmaker:after, .game-live:after, .in-play.game-fancy:before, .in-play.game-sportsbook:before, .in-play.game-bookmaker:before, .in-play.game-live:before, .fancy-head .in-play span:before, .sportsbook-head .in-play span:before, .bookmaker .in-play span:before, .fancy-suspend span, .fancy-suspend-white span, .power-wrap h3 img, .power-wrap-b img, .login-wrap .btn-login, .login-wrap .btn-signup, .header a, .account-wrap li .refresh-bar, .language, .flag, .menu-wrap a, .menu li:hover ul, .setting-wrap li:hover ul, .menu-list a, .menu-list .Go, .favor-set, .path .path-back, .path-pop a, .short-amount, .odd-add a, .stake-popup a, .slider-bar span, .slider-bar a, .live:before, .load-pending strong, .favor, .kv-wrap a, .promo-banner-wrap a, .tab-highlight a, .tab-markets a, .event-left .slip-head span, .event-right .slip-head span, .event-left .matched-head span, .event-right .matched-head span, .app-link, .live-list a, .live-list a:after, .change-channel::before, .marquee-box .tc-content h5:before, .tc-content .marquee-box h5:before, .marquee-box .tc-content h5:after, .game-E i:before, .game-E i:after, .game-list-col dd a, .game-list-col dd a span, .game-list-col dd .info, .game-head a, .game-team .game-visit span, .game-scores .game-visit span, .game-team .game-home span, .game-scores .game-home span, .game-team .game-vs span, .game-scores .game-vs span, .game-scores ul .scores-box span, .game-progress:after, .sum-status, .score-pop:before, .score-pop-last:before, .tab-HS a, .tv-control a:before, .bets td a, .bets-HS td a, .bets-GH td a, .bets td span, .bets-HS td span, .bets-GH td span, .disabled .col-visit a:before, .disabled .col-home a:before, .disabled .col-draw a:before, .disabled.col-visit a:before, .disabled.col-home a:before, .disabled.col-draw a:before, .horse-info>dd:hover .horse_info-hover, .dog-info>dd:hover .horse_info-hover, .to-win:before, .to-lose:before, .more, .suspend span, .bets .suspend span, .bets-HS .suspend span, .bets-GH .suspend span, .line_markets-team .game-vs div:before, .line_markets-team .game-vs div:after, .rules-wrap:target, .line_market-name span, .quick_bet-wrap .btn span, .quick_bet-wrap .btn-send span, .quick_bet-wrap .nova88exch .total_all .search-but span, .nova88exch .total_all .quick_bet-wrap .search-but span, .quick_bet-wrap .pages a span, .pages .quick_bet-wrap a span, .quick_bet-wrap .calendarTable_inputBox input span, .calendarTable_inputBox .quick_bet-wrap input span, .quick_bet-wrap .calendarTable_inputBox textarea span, .calendarTable_inputBox .quick_bet-wrap textarea span, .gametab-head h4:after, .gametab-head .tc-content h5:after, .tc-content .gametab-head h5:after, .gametab-head h4:before, .gametab-head .tc-content h5:before, .tc-content .gametab-head h5:before, .other-tab:before, .other-tab:after, .fancy-info dt span, td .fancy-info dt, .special_bets-tab a, .special_bets-tab .more_drop>a:before, .announce-footer .confirm-checkbox, .close_pop, .error-text, .go-back, .pop-close, .expand-close, .expand-open, .selection, .initial-balance dt span, .final-balance dt span, .gamehall-wrap-simple a:after, .entrance-title dd:after {
+    display: block;
+}
