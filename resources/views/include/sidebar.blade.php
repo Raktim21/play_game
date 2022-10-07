@@ -21,12 +21,12 @@
                     <a href="{{route('dashboard')}}"><i class="ik ik-bar-chart-2"></i><span>{{ __('Dashboard')}}</span></a>
                 </div>
                 <div class="nav-lavel">{{ __('Layouts')}} </div>
-                <div class="nav-item {{ ($segment1 == 'pos') ? 'active' : '' }}">
+                {{-- <div class="nav-item {{ ($segment1 == 'pos') ? 'active' : '' }}">
                     <a href="{{url('inventory')}}"><i class="ik ik-shopping-cart"></i><span>{{ __('Inventory')}}</span> <span class=" badge badge-success badge-right">{{ __('New')}}</span></a>
-                </div>
-                <div class="nav-item {{ ($segment1 == 'pos') ? 'active' : '' }}">
+                </div> --}}
+                {{-- <div class="nav-item {{ ($segment1 == 'pos') ? 'active' : '' }}">
                     <a href="{{url('pos')}}"><i class="ik ik-printer"></i><span>{{ __('POS')}}</span> <span class=" badge badge-success badge-right">{{ __('New')}}</span></a>
-                </div>
+                </div> --}}
                 <div class="nav-item {{ ($segment1 == 'users' || $segment1 == 'roles'||$segment1 == 'permission' ||$segment1 == 'user') ? 'active open' : '' }} has-sub">
                     <a href="#"><i class="ik ik-user"></i><span>{{ __('Adminstrator')}}</span></a>
                     <div class="submenu-content">
@@ -47,16 +47,16 @@
                 </div>
 
                 <div class="nav-lavel">{{ __('Documentation')}} </div>
-                <div class="nav-item {{ ($segment1 == 'rest-api') ? 'active' : '' }}">
+                {{-- <div class="nav-item {{ ($segment1 == 'rest-api') ? 'active' : '' }}">
                     <a href="{{url('rest-api')}}"><i class="ik ik-cloud"></i><span>{{ __('REST API')}}</span> </a>
-                </div>
+                </div> --}}
                 <div class="nav-item {{ ($segment1 == 'permission-example') ? 'active' : '' }}">
-                    <a href="{{url('permission-example')}}"><i class="ik ik-unlock"></i><span>{{ __('Laravel Permission')}}</span> </a>
+                    <a href="{{url('permission-example')}}"><i class="ik ik-unlock"></i><span>{{ __('Permission')}}</span> </a>
                 </div>
-                <div class="nav-item {{ ($segment1 == 'table-datatable-edit') ? 'active' : '' }}">
+                {{-- <div class="nav-item {{ ($segment1 == 'table-datatable-edit') ? 'active' : '' }}">
                     <a href="{{url('table-datatable-edit')}}"><i class="ik ik-layout"></i><span>{{ __('Editable Datatable')}}</span>  </a>
 
-                </div>
+                </div> --}}
                 <!-- end inventory pages -->
 
                 <div class="nav-lavel">{{ __('Themekit Pages')}} </div>
