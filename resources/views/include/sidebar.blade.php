@@ -20,7 +20,7 @@
                 <div class="nav-item {{ ($segment1 == 'dashboard') ? 'active' : '' }}">
                     <a href="{{route('dashboard')}}"><i class="ik ik-bar-chart-2"></i><span>{{ __('Dashboard')}}</span></a>
                 </div>
-                <div class="nav-lavel">{{ __('Layouts')}} </div>
+                {{-- <div class="nav-lavel">{{ __('Layouts')}} </div> --}}
                 {{-- <div class="nav-item {{ ($segment1 == 'pos') ? 'active' : '' }}">
                     <a href="{{url('inventory')}}"><i class="ik ik-shopping-cart"></i><span>{{ __('Inventory')}}</span> <span class=" badge badge-success badge-right">{{ __('New')}}</span></a>
                 </div> --}}
@@ -28,38 +28,130 @@
                     <a href="{{url('pos')}}"><i class="ik ik-printer"></i><span>{{ __('POS')}}</span> <span class=" badge badge-success badge-right">{{ __('New')}}</span></a>
                 </div> --}}
                 <div class="nav-item {{ ($segment1 == 'users' || $segment1 == 'roles'||$segment1 == 'permission' ||$segment1 == 'user') ? 'active open' : '' }} has-sub">
-                    <a href="#"><i class="ik ik-user"></i><span>{{ __('Adminstrator')}}</span></a>
+                    <a href="#">
+                        <i class="ik ik-user"></i>
+                        <span>{{ __('Adminstrator')}}</span>
+                    </a>
                     <div class="submenu-content">
                         <!-- only those have manage_user permission will get access -->
                         @can('manage_user')
-                        <a href="{{url('users')}}" class="menu-item {{ ($segment1 == 'users') ? 'active' : '' }}">{{ __('Users')}}</a>
-                        <a href="{{url('user/create')}}" class="menu-item {{ ($segment1 == 'user' && $segment2 == 'create') ? 'active' : '' }}">{{ __('Add User')}}</a>
-                         @endcan
+                            <a href="{{url('users')}}" class="menu-item {{ ($segment1 == 'users') ? 'active' : '' }}">{{ __('Users')}}</a>
+                            <a href="{{url('user/create')}}" class="menu-item {{ ($segment1 == 'user' && $segment2 == 'create') ? 'active' : '' }}">{{ __('Add User')}}</a>
+                        @endcan
                          <!-- only those have manage_role permission will get access -->
                         @can('manage_roles')
-                        <a href="{{url('roles')}}" class="menu-item {{ ($segment1 == 'roles') ? 'active' : '' }}">{{ __('Roles')}}</a>
+                            <a href="{{url('roles')}}" class="menu-item {{ ($segment1 == 'roles') ? 'active' : '' }}">{{ __('Roles')}}</a>
                         @endcan
                         <!-- only those have manage_permission permission will get access -->
                         @can('manage_permission')
-                        <a href="{{url('permission')}}" class="menu-item {{ ($segment1 == 'permission') ? 'active' : '' }}">{{ __('Permission')}}</a>
+                            <a href="{{url('permission')}}" class="menu-item {{ ($segment1 == 'permission') ? 'active' : '' }}">{{ __('Permission')}}</a>
                         @endcan
                     </div>
                 </div>
 
-                <div class="nav-lavel">{{ __('Documentation')}} </div>
+                {{-- <div class="nav-lavel">{{ __('Documentation')}} </div> --}}
                 {{-- <div class="nav-item {{ ($segment1 == 'rest-api') ? 'active' : '' }}">
                     <a href="{{url('rest-api')}}"><i class="ik ik-cloud"></i><span>{{ __('REST API')}}</span> </a>
                 </div> --}}
-                <div class="nav-item {{ ($segment1 == 'permission-example') ? 'active' : '' }}">
+                {{-- <div class="nav-item {{ ($segment1 == 'permission-example') ? 'active' : '' }}">
                     <a href="{{url('permission-example')}}"><i class="ik ik-unlock"></i><span>{{ __('Permission')}}</span> </a>
+                </div> --}}
+
+                {{-- active open --}}
+                <div class="nav-item @yield('account_statment')  @yield('account_summary') @yield('profile') @yield('activity_log') has-sub">
+                    <a href="#">
+                        <i class="ik ik-users"></i>
+                        <span>{{ __('My Account')}}</span>
+                    </a>
+                    @can('account_statment')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('account_statment')">{{ __('Account statment')}}</a>
+                        </div>
+                    @endcan
+                    @can('account_summary')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('account_summary')">{{ __('Account summary')}}</a>
+                        </div>
+                    @endcan
+                    @can('profile')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('profile')">{{ __('Profile')}}</a>
+                        </div>
+                    @endcan
+                    @can('activity_log')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('activity_log')">{{ __('Activity log')}}</a>
+                        </div>
+                    @endcan
                 </div>
+
+
+                <div class="nav-item @yield('account_statment')  @yield('account_summary') @yield('profile') @yield('activity_log') has-sub">
+                    <a href="#">
+                        <i class="ik ik-file-text"></i>
+                        <span>{{ __('My Report')}}</span>
+                    </a>
+                    @can('profit_loss_report')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('profit_loss_report')">{{ __('Profit/Loss report by market')}}</a>
+                        </div>
+                    @endcan
+                    @can('summary_profit_loss_report')
+                        <div class="submenu-content">
+                            <a href="#!" class="menu-item @yield('summary_profit_loss_report')">{{ __('Summary profit/loss report')}}</a>
+                        </div>
+                    @endcan
+                </div>
+
+         
+
+                @can('downline_list')
+                    <div class="nav-item @yield('admin.downline.list')">
+                        <a href="{{route('admin.downline.list')}}">
+                            <i class="ik ik-arrow-down"></i>
+                            <span>{{ __('Downline list')}}</span> 
+                        </a>
+                    </div>
+                @endcan
+
+                @can('banking')
+                    <div class="nav-item @yield('admin.banking.list')">
+                        <a href="{{route('admin.banking.list')}}">
+                            <i class="ik ik-airplay"></i>
+                            <span>{{ __('Banking')}}</span> 
+                        </a>
+                    </div>
+                @endcan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {{-- <div class="nav-item {{ ($segment1 == 'icons') ? 'active' : '' }}">
+                    <a href="{{url('icons')}}"><i class="ik ik-command"></i><span>{{ __('Icons')}}</span></a>
+                </div> --}}
+
                 {{-- <div class="nav-item {{ ($segment1 == 'table-datatable-edit') ? 'active' : '' }}">
                     <a href="{{url('table-datatable-edit')}}"><i class="ik ik-layout"></i><span>{{ __('Editable Datatable')}}</span>  </a>
 
                 </div> --}}
                 <!-- end inventory pages -->
 
-                <div class="nav-lavel">{{ __('Themekit Pages')}} </div>
+                {{-- <div class="nav-lavel">{{ __('Themekit Pages')}} </div>
                 <div class="nav-item {{ ($segment1 == 'form-components' || $segment1 == 'form-advance'||$segment1 == 'form-addon') ? 'active open' : '' }} has-sub">
                     <a href="#"><i class="ik ik-edit"></i><span>{{ __('Forms')}}</span></a>
                     <div class="submenu-content">
@@ -149,9 +241,7 @@
                 <div class="nav-item {{ ($segment1 == 'layouts') ? 'active' : '' }}">
                     <a href="{{url('layouts')}}"><i class="ik ik-layout"></i><span>{{ __('Layouts')}}</span></a>
                 </div>
-                <div class="nav-item {{ ($segment1 == 'icons') ? 'active' : '' }}">
-                    <a href="{{url('icons')}}"><i class="ik ik-command"></i><span>{{ __('Icons')}}</span></a>
-                </div>
+               
                 <div class="nav-item {{ ($segment1 == 'pricing') ? 'active' : '' }}">
                     <a href="{{url('pricing')}}"><i class="ik ik-dollar-sign"></i><span>{{ __('Pricing')}}</span></a>
                 </div>
@@ -170,7 +260,7 @@
                 </div>
                 <div class="nav-item">
                     <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>{{ __('Disabled Menu')}}</span></a>
-                </div>
+                </div> --}}
                 
         </div>
     </div>

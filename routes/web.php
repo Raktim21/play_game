@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\BankingController;
+use App\Http\Controllers\DownlineListController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -48,8 +50,8 @@ Route::group(['middleware' => 'auth'], function(){
 
 	//only those have manage_user permission will get access
 	Route::group(['middleware' => 'can:manage_user'], function(){
-	Route::get('/users', [UserController::class,'index']);
-	Route::get('/user/get-list', [UserController::class,'getUserList']);
+		Route::get('/users', [UserController::class,'index']);
+		Route::get('/user/get-list', [UserController::class,'getUserList']);
 		Route::get('/user/create', [UserController::class,'create']);
 		Route::post('/user/create', [UserController::class,'store'])->name('create-user');
 		Route::get('/user/{id}', [UserController::class,'edit']);
@@ -148,6 +150,15 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/purchases/create', function () { return view('inventory.purchase.create'); }); 
 	Route::get('/customers', function () { return view('inventory.people.customers'); }); 
 	Route::get('/suppliers', function () { return view('inventory.people.suppliers'); }); 
+
+	//Downline list
+	Route::group(['middleware' => 'can:downline_list'], function(){
+		Route::get('admin/downlne-list/index',[DownlineListController::class, 'index'])->name('admin.downline.list');
+	});
+	//Banking
+	Route::group(['middleware' => 'can:banking'], function(){
+		Route::get('admin/banking/index',[BankingController::class, 'index'])->name('admin.banking.list');
+	});
 	
 });
 
